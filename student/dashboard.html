@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — SGC Events</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/student.css" />
+</head>
+<body>
+
+  <div class="app-shell" id="dashboard-root">
+    <aside class="app-sidebar">
+      <p class="app-sidebar__logo">SGC <em class="accent">Events</em></p>
+      <nav class="app-sidebar__nav" aria-label="Student navigation">
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+        <a href="../events.html">Events</a>
+        <a href="my-events.html">My Events</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="profile.html">Profile</a>
+        <a href="#" data-logout>Logout</a>
+      </nav>
+    </aside>
+
+    <main class="app-main">
+      <div class="dashboard-welcome">
+        <h1 class="type-h1" id="welcome-message">Welcome back</h1>
+        <p class="type-lede">Here's what's happening across campus.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <p class="stat-card__value" id="stat-registered">—</p>
+          <p class="stat-card__label">Registered Events</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-card__value" id="stat-upcoming">—</p>
+          <p class="stat-card__label">Upcoming Events</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-card__value" id="stat-completed">—</p>
+          <p class="stat-card__label">Completed Events</p>
+        </div>
+      </div>
+
+      <section class="dashboard-section">
+        <div class="section-head"><h2 class="type-h2">Upcoming Events</h2><a href="../events.html" class="btn btn--ghost">View All</a></div>
+        <div class="event-grid" id="dashboard-browse-upcoming" aria-live="polite"></div>
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-head"><h2 class="type-h2">My Registrations</h2><a href="my-events.html" class="btn btn--ghost">View All</a></div>
+        <div class="event-grid" id="dashboard-my-registrations" aria-live="polite"></div>
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-head"><h2 class="type-h2">Recommended Events</h2></div>
+        <div class="event-grid" id="dashboard-recommended" aria-live="polite"></div>
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-head"><h2 class="type-h2">Recent Events</h2></div>
+        <div class="event-grid" id="dashboard-recent" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/student.js"></script>
+</body>
+</html>

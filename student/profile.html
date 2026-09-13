@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile — SGC Events</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/student.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <p class="app-sidebar__logo">SGC <em class="accent">Events</em></p>
+      <nav class="app-sidebar__nav" aria-label="Student navigation">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="../events.html">Events</a>
+        <a href="my-events.html">My Events</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="profile.html" aria-current="page">Profile</a>
+        <a href="#" data-logout>Logout</a>
+      </nav>
+    </aside>
+
+    <main class="app-main">
+      <div class="dashboard-welcome">
+        <h1 class="type-h1">My Profile</h1>
+        <p class="type-lede">Roll number and email are fixed identifiers and can't be changed here.</p>
+      </div>
+
+      <div class="profile-form-shell">
+        <p id="profile-status" class="form-banner" hidden></p>
+        <form id="profile-form" novalidate>
+          <div class="form-field">
+            <label for="profile-name">Full Name</label>
+            <input type="text" id="profile-name" name="name" required />
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="profile-rollNo">Roll Number</label>
+              <input type="text" id="profile-rollNo" name="rollNo" disabled />
+            </div>
+            <div class="form-field">
+              <label for="profile-email">Email</label>
+              <input type="email" id="profile-email" name="email" disabled />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="profile-department">Department</label>
+              <select id="profile-department" name="department" required>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="General">General</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="profile-semester">Semester</label>
+              <select id="profile-semester" name="semester" required>
+                <option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option>
+                <option value="5">5</option><option value="6">6</option>
+                <option value="7">7</option><option value="8">8</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="profile-phone">Phone Number</label>
+            <input type="tel" id="profile-phone" name="phone" required />
+          </div>
+
+          <button type="submit" class="btn btn--turquoise">Save Changes</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/student.js"></script>
+</body>
+</html>

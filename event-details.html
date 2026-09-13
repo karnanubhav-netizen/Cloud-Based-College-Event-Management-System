@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Details — Saraswati Group of Colleges</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="shell nav__row">
+      <a href="index.html" class="nav__logo">SGC <em class="accent">Events</em></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="events.html" data-nav-link aria-current="page">Events</a>
+        <a href="about.html" data-nav-link>About</a>
+        <a href="gallery.html" data-nav-link>Gallery</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="student/login.html" class="btn btn--ghost">Student Login</a>
+        <a href="admin/login.html" class="btn btn--primary">Admin Login</a>
+        <button class="nav__toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="nav__mobile-panel" data-nav-panel>
+      <a href="events.html">Events</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="student/login.html">Student Login</a>
+      <a href="admin/login.html">Admin Login</a>
+    </div>
+  </header>
+
+  <main class="section--tight shell" id="details-wrapper">
+    <div class="details-grid">
+      <div class="details-media">
+        <img id="details-poster" src="" alt="" />
+      </div>
+
+      <div>
+        <span class="details-category" id="details-category">—</span>
+        <h1 class="type-h1 details-title" id="details-title">Loading event…</h1>
+
+        <div class="details-facts">
+          <div>
+            <p class="details-fact__label">Date</p>
+            <p class="details-fact__value" id="details-date">—</p>
+          </div>
+          <div>
+            <p class="details-fact__label">Time</p>
+            <p class="details-fact__value" id="details-time">—</p>
+          </div>
+          <div>
+            <p class="details-fact__label">Venue</p>
+            <p class="details-fact__value" id="details-venue">—</p>
+          </div>
+          <div>
+            <p class="details-fact__label">Department</p>
+            <p class="details-fact__value" id="details-department">—</p>
+          </div>
+          <div>
+            <p class="details-fact__label">Organizer</p>
+            <p class="details-fact__value" id="details-organizer">—</p>
+          </div>
+          <div>
+            <p class="details-fact__label">Registration Deadline</p>
+            <p class="details-fact__value" id="details-deadline">—</p>
+          </div>
+        </div>
+
+        <p class="details-desc" id="details-description">Loading description…</p>
+
+        <div class="details-panel">
+          <div class="details-panel__row">
+            <span>Seats</span>
+            <strong id="details-seats">—</strong>
+          </div>
+          <p id="registration-status" class="details-status-msg details-status-msg--info" hidden></p>
+          <button type="button" id="register-btn" class="btn btn--turquoise btn--block" disabled>Loading…</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__grid">
+      <div>
+        <p class="footer__college">Saraswati Group of Colleges</p>
+        <p class="type-meta" style="color: var(--color-gray);">A cloud-based platform for discovering and managing campus events.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Explore</p>
+        <ul class="footer__links"><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li></ul>
+      </div>
+      <div>
+        <p class="footer__heading">Account</p>
+        <ul class="footer__links"><li><a href="student/login.html">Student Login</a></li><li><a href="student/signup.html">Student Signup</a></li><li><a href="admin/login.html">Admin Login</a></li></ul>
+      </div>
+      <div>
+        <p class="footer__heading">Contact</p>
+        <ul class="footer__links"><li><a href="about.html">About the College</a></li></ul>
+      </div>
+    </div>
+    <div class="shell footer__bottom">© 2026 Saraswati Group of Colleges. All rights reserved.</div>
+  </footer>
+
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/event-details.js"></script>
+</body>
+</html>

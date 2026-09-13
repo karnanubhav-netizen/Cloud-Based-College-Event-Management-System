@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Login — Saraswati Group of Colleges</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+
+  <div class="auth-shell">
+    <div class="auth-shell__form">
+      <div class="auth-shell__form-inner">
+        <a href="../index.html" class="auth-logo">SGC <em class="accent">Events</em></a>
+        <h1 class="type-h1 auth-heading">Welcome back</h1>
+        <p class="auth-subheading">Log in to register for events and view your registrations.</p>
+
+        <form id="login-form" novalidate>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" autocomplete="current-password" required />
+          </div>
+          <button type="submit" class="btn btn--turquoise btn--block">Log In</button>
+        </form>
+
+        <p class="auth-footer-note">New here? <a href="signup.html">Create an account</a></p>
+      </div>
+    </div>
+    <div class="auth-shell__media">
+      <img src="https://picsum.photos/seed/student-login/900/1200" alt="Students at a campus event" />
+    </div>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+</body>
+</html>

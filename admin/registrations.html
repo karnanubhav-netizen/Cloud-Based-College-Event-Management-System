@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrations — Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body data-page="admin-registrations">
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <p class="app-sidebar__logo">SGC <em class="accent">Events</em></p>
+      <nav class="app-sidebar__nav" aria-label="Admin navigation">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-event.html">Create Event</a>
+        <a href="manage-events.html">Manage Events</a>
+        <a href="registrations.html" aria-current="page">Registrations</a>
+        <a href="students.html">Students</a>
+        <a href="gallery-management.html">Gallery</a>
+        <a href="#" data-logout>Logout</a>
+      </nav>
+    </aside>
+
+    <main class="app-main">
+      <div class="dashboard-welcome">
+        <h1 class="type-h1">Registrations</h1>
+        <p class="type-lede">Track student registrations for each event.</p>
+      </div>
+
+      <div class="panel toolbar-panel">
+        <select id="registration-event-select"></select>
+        <input id="registrations-search" type="search" placeholder="Search students" />
+        <button id="export-csv" class="btn btn--ghost" type="button">Export CSV</button>
+      </div>
+
+      <div class="panel">
+        <div class="section-head">
+          <h2 class="type-h2" id="event-name-header">Event</h2>
+          <span class="meta" id="registration-count">0 / 0</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Student Name</th>
+                <th>Roll Number</th>
+                <th>Department</th>
+                <th>Semester</th>
+                <th>Email</th>
+                <th>Registration Date</th>
+              </tr>
+            </thead>
+            <tbody id="registrations-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

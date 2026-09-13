@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Event — Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body data-page="admin-create-event">
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <p class="app-sidebar__logo">SGC <em class="accent">Events</em></p>
+      <nav class="app-sidebar__nav" aria-label="Admin navigation">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-event.html" aria-current="page">Create Event</a>
+        <a href="manage-events.html">Manage Events</a>
+        <a href="registrations.html">Registrations</a>
+        <a href="students.html">Students</a>
+        <a href="gallery-management.html">Gallery</a>
+        <a href="#" data-logout>Logout</a>
+      </nav>
+    </aside>
+
+    <main class="app-main">
+      <div class="dashboard-welcome">
+        <h1 class="type-h1">Create Event</h1>
+        <p class="type-lede">Publish new events with posters, dates, capacity and registration deadlines.</p>
+      </div>
+
+      <div class="panel form-panel">
+        <p id="page-status" class="page-status page-status--success" hidden></p>
+        <form id="create-event-form">
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="title">Event Name</label>
+              <input id="title" name="title" required />
+            </div>
+            <div class="form-field">
+              <label for="category">Category</label>
+              <select id="category" name="category" required>
+                <option value="Technical">Technical</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Sports">Sports</option>
+                <option value="Workshops">Workshops</option>
+                <option value="Seminars">Seminars</option>
+                <option value="Conferences">Conferences</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="5" required></textarea>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="department">Department</label>
+              <select id="department" name="department" required>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="General">General</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="organizer">Organizer</label>
+              <input id="organizer" name="organizer" value="Saraswati Group of Colleges" />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-field">
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option value="upcoming">upcoming</option>
+                <option value="ongoing">ongoing</option>
+                <option value="completed">completed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="startTime">Start Time</label>
+              <input id="startTime" name="startTime" type="time" required />
+            </div>
+            <div class="form-field">
+              <label for="endTime">End Time</label>
+              <input id="endTime" name="endTime" type="time" required />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="venue">Venue</label>
+              <input id="venue" name="venue" required />
+            </div>
+            <div class="form-field">
+              <label for="maxSeats">Maximum Seats</label>
+              <input id="maxSeats" name="maxSeats" type="number" min="1" required />
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="registrationDeadline">Registration Deadline</label>
+              <input id="registrationDeadline" name="registrationDeadline" type="datetime-local" />
+            </div>
+            <div class="form-field">
+              <label for="poster-file">Event Poster</label>
+              <input id="poster-file" name="poster-file" type="file" accept="image/*" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--turquoise">Create Event</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

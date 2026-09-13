@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — SGC Events</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body data-page="admin-dashboard">
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <p class="app-sidebar__logo">SGC <em class="accent">Events</em></p>
+      <nav class="app-sidebar__nav" aria-label="Admin navigation">
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+        <a href="create-event.html">Create Event</a>
+        <a href="manage-events.html">Manage Events</a>
+        <a href="registrations.html">Registrations</a>
+        <a href="students.html">Students</a>
+        <a href="gallery-management.html">Gallery</a>
+        <a href="#" data-logout>Logout</a>
+      </nav>
+    </aside>
+
+    <main class="app-main">
+      <div class="dashboard-welcome">
+        <h1 class="type-h1">Admin Dashboard</h1>
+        <p class="type-lede">Monitor events, registrations and campus engagement.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <p class="stat-card__value" id="total-events">—</p>
+          <p class="stat-card__label">Total Events</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-card__value" id="total-students">—</p>
+          <p class="stat-card__label">Total Students</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-card__value" id="total-registrations">—</p>
+          <p class="stat-card__label">Total Registrations</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-card__value" id="upcoming-events">—</p>
+          <p class="stat-card__label">Upcoming Events</p>
+        </div>
+      </div>
+
+      <div class="dashboard-actions">
+        <a href="create-event.html" class="btn btn--primary">
+          + Create Event
+        </a>
+
+        <a href="registrations.html" class="btn btn--ghost">
+          View Registrations
+        </a>
+
+        <a href="manage-events.html" class="btn btn--ghost">
+          Manage Events
+        </a>
+      </div>
+
+      <section class="dashboard-section">
+        <div class="section-head">
+          <h2 class="type-h2">Recent Events</h2>
+        </div>
+        <ul class="list-panel" id="recent-events-list"></ul>
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-head">
+          <h2 class="type-h2">Most Registered Events</h2>
+        </div>
+        <ul class="list-panel" id="most-registered-list"></ul>
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-head">
+          <h2 class="type-h2">Registration Statistics</h2>
+        </div>
+        <div class="registration-stats" id="registration-stats"></div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

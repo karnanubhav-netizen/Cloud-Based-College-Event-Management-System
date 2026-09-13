@@ -1,0 +1,31 @@
+/* ==========================================================================
+   student.css
+   Additions specific to student/dashboard.html, my-events.html, profile.html.
+   Shared shell (.app-shell, .app-sidebar, .stat-card) lives in style.css.
+   ========================================================================== */
+
+.dashboard-welcome { margin-bottom: var(--space-4); }
+.dashboard-welcome .type-h1 { margin-bottom: 0.25rem; }
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.dashboard-section { margin-bottom: var(--space-5); }
+.dashboard-section .section-head { margin-bottom: var(--space-3); }
+.dashboard-section .section-head .type-h2 { font-size: var(--fs-h3); }
+
+.profile-form-shell {
+  max-width: 640px;
+  border: var(--border-hair-soft);
+  background: var(--color-paper);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .stat-row { grid-template-columns: 1fr; }
+}

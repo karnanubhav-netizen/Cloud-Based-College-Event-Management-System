@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery Management — Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body data-page="admin-gallery">
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <p class="app-sidebar__logo">SGC <em class="accent">Events</em></p>
+      <nav class="app-sidebar__nav" aria-label="Admin navigation">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-event.html">Create Event</a>
+        <a href="manage-events.html">Manage Events</a>
+        <a href="registrations.html">Registrations</a>
+        <a href="students.html">Students</a>
+        <a href="gallery-management.html" aria-current="page">Gallery</a>
+        <a href="#" data-logout>Logout</a>
+      </nav>
+    </aside>
+
+    <main class="app-main">
+      <div class="dashboard-welcome">
+        <h1 class="type-h1">Gallery Management</h1>
+        <p class="type-lede">Upload and organize photo memories for completed events.</p>
+      </div>
+
+      <div class="panel toolbar-panel">
+        <select id="gallery-event-select"></select>
+      </div>
+
+      <div class="panel form-panel">
+        <h2 class="type-h2" id="gallery-event-name">Select an event</h2>
+        <div class="form-field">
+          <label for="gallery-files">Select multiple images</label>
+          <input id="gallery-files" type="file" accept="image/*" multiple />
+        </div>
+        <button id="upload-gallery-btn" class="btn btn--turquoise" type="button">Upload Photos</button>
+      </div>
+
+      <div class="panel">
+        <div class="gallery-upload-grid" id="gallery-preview-list"></div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

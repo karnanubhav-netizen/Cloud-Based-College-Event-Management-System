@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Students — Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body data-page="admin-students">
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <p class="app-sidebar__logo">SGC <em class="accent">Events</em></p>
+      <nav class="app-sidebar__nav" aria-label="Admin navigation">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-event.html">Create Event</a>
+        <a href="manage-events.html">Manage Events</a>
+        <a href="registrations.html">Registrations</a>
+        <a href="students.html" aria-current="page">Students</a>
+        <a href="gallery-management.html">Gallery</a>
+        <a href="#" data-logout>Logout</a>
+      </nav>
+    </aside>
+
+    <main class="app-main">
+      <div class="dashboard-welcome">
+        <h1 class="type-h1">Students</h1>
+        <p class="type-lede">View registered students and their participation records.</p>
+      </div>
+
+      <div class="panel toolbar-panel">
+        <input id="student-search" type="search" placeholder="Search by name, roll number or department" />
+      </div>
+
+      <div class="panel">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Department</th>
+                <th>Semester</th>
+                <th>Email</th>
+                <th>Registration Count</th>
+              </tr>
+            </thead>
+            <tbody id="students-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

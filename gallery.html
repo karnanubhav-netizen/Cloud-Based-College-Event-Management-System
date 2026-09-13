@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Saraswati Group of Colleges</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="shell nav__row">
+      <a href="index.html" class="nav__logo">SGC <em class="accent">Events</em></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="events.html" data-nav-link>Events</a>
+        <a href="about.html" data-nav-link>About</a>
+        <a href="gallery.html" data-nav-link aria-current="page">Gallery</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="student/login.html" class="btn btn--ghost"><span class="btn-label--desktop">Student Login</span></a>
+        <a href="admin/login.html" class="btn btn--primary"><span class="btn-label--desktop">Admin Login</span></a>
+        <button class="nav__toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="nav__mobile-panel" data-nav-panel>
+      <a href="events.html">Events</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="student/login.html">Student Login</a>
+      <a href="admin/login.html">Admin Login</a>
+    </div>
+  </header>
+
+  <main class="shell section--tight">
+    <!-- Listing view (no ?event= param) -->
+    <div id="gallery-listing-view">
+      <div class="page-header" style="padding-top:0;">
+        <h1 class="type-h1">Moments <em class="accent">worth remembering</em></h1>
+        <p class="type-lede">Relive past fests, workshops and cultural nights through the community's lens.</p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid" aria-live="polite">
+        <!-- js/gallery.js renders gallery cards here -->
+      </div>
+    </div>
+
+    <!-- Single gallery view (?event=EVENT_ID) -->
+    <div id="gallery-single-view">
+      <div class="page-header" style="padding-top:0;">
+        <a href="gallery.html" class="type-meta">← Back to Gallery</a>
+        <h1 class="type-h1" id="gallery-title" style="margin-top: var(--space-2);">Loading gallery…</h1>
+        <p class="type-lede" id="gallery-meta"></p>
+      </div>
+      <div class="photo-grid" id="photo-grid" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button type="button" class="lightbox__prev" id="lightbox-prev" aria-label="Previous photo">
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <img id="lightbox-image" src="" alt="Enlarged event photo" />
+    <button type="button" class="lightbox__next" id="lightbox-next" aria-label="Next photo">
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Close photo viewer">
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+
+  <footer class="footer">
+    <div class="shell footer__grid">
+      <div>
+        <p class="footer__college">Saraswati Group of Colleges</p>
+        <p class="type-meta" style="color: var(--color-gray);">A cloud-based platform for discovering and managing campus events.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Explore</p>
+        <ul class="footer__links"><li><a href="events.html">Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li></ul>
+      </div>
+      <div>
+        <p class="footer__heading">Account</p>
+        <ul class="footer__links"><li><a href="student/login.html">Student Login</a></li><li><a href="student/signup.html">Student Signup</a></li><li><a href="admin/login.html">Admin Login</a></li></ul>
+      </div>
+      <div>
+        <p class="footer__heading">Contact</p>
+        <ul class="footer__links"><li><a href="about.html">About the College</a></li></ul>
+      </div>
+    </div>
+    <div class="shell footer__bottom">© 2026 Saraswati Group of Colleges. All rights reserved.</div>
+  </footer>
+
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/gallery.js"></script>
+</body>
+</html>

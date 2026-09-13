@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Events — Admin</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body data-page="admin-manage-events">
+  <div class="app-shell">
+    <aside class="app-sidebar">
+      <p class="app-sidebar__logo">SGC <em class="accent">Events</em></p>
+      <nav class="app-sidebar__nav" aria-label="Admin navigation">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-event.html">Create Event</a>
+        <a href="manage-events.html" aria-current="page">Manage Events</a>
+        <a href="registrations.html">Registrations</a>
+        <a href="students.html">Students</a>
+        <a href="gallery-management.html">Gallery</a>
+        <a href="#" data-logout>Logout</a>
+      </nav>
+    </aside>
+
+    <main class="app-main">
+      <div class="dashboard-welcome">
+        <h1 class="type-h1">Manage Events</h1>
+        <p class="type-lede">Search, update, and remove events from the platform.</p>
+      </div>
+
+      <div class="panel toolbar-panel">
+        <input id="event-search" type="search" placeholder="Search events" />
+        <select id="event-status-filter">
+          <option value="all">All statuses</option>
+          <option value="upcoming">Upcoming</option>
+          <option value="ongoing">Ongoing</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+
+      <div class="event-management-grid" id="manage-events-list"></div>
+
+      <section id="edit-event-section" class="panel form-panel" style="margin-top: 2rem;">
+        <h2 class="type-h2">Edit Event</h2>
+        <p id="page-status" class="page-status page-status--success" hidden></p>
+        <form id="edit-event-form">
+          <div class="form-field">
+            <label for="edit-title">Event Name</label>
+            <input id="edit-title" name="title" required />
+          </div>
+          <div class="form-field">
+            <label for="edit-description">Description</label>
+            <textarea id="edit-description" name="description" rows="4" required></textarea>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="edit-category">Category</label>
+              <select id="edit-category" name="category">
+                <option value="Technical">Technical</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Sports">Sports</option>
+                <option value="Workshops">Workshops</option>
+                <option value="Seminars">Seminars</option>
+                <option value="Conferences">Conferences</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="edit-department">Department</label>
+              <select id="edit-department" name="department">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="General">General</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="edit-date">Date</label>
+              <input type="date" id="edit-date" name="date" required />
+            </div>
+            <div class="form-field">
+              <label for="edit-status">Status</label>
+              <select id="edit-status" name="status">
+                <option value="upcoming">upcoming</option>
+                <option value="ongoing">ongoing</option>
+                <option value="completed">completed</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="edit-startTime">Start Time</label>
+              <input type="time" id="edit-startTime" name="startTime" />
+            </div>
+            <div class="form-field">
+              <label for="edit-endTime">End Time</label>
+              <input type="time" id="edit-endTime" name="endTime" />
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="edit-venue">Venue</label>
+              <input id="edit-venue" name="venue" required />
+            </div>
+            <div class="form-field">
+              <label for="edit-maxSeats">Maximum Seats</label>
+              <input type="number" id="edit-maxSeats" name="maxSeats" min="1" required />
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="edit-registrationDeadline">Registration Deadline</label>
+              <input type="datetime-local" id="edit-registrationDeadline" name="registrationDeadline" />
+            </div>
+            <div class="form-field">
+              <label for="edit-organizer">Organizer</label>
+              <input id="edit-organizer" name="organizer" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn--turquoise">Save Changes</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

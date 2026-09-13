@@ -1,0 +1,64 @@
+/* ==========================================================================
+   auth.css
+   Small additions specific to login/signup screens.
+   Shared shell (.auth-shell, .form-field, etc.) lives in style.css —
+   this file only holds things that belong to auth pages alone.
+   ========================================================================== */
+
+.auth-shell__form-inner {
+  width: 100%;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.auth-logo {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin-bottom: var(--space-5);
+  display: inline-block;
+}
+
+.auth-heading { margin-bottom: var(--space-1); }
+.auth-subheading { color: var(--color-charcoal-70); margin-bottom: var(--space-4); }
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--space-3);
+}
+
+.form-banner {
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  margin-bottom: var(--space-3);
+}
+.form-banner--error { background: #F5DEDA; color: #A6382C; }
+.form-banner--success { background: var(--color-turquoise-tint); color: var(--color-turquoise-deep); }
+
+.auth-footer-note {
+  margin-top: var(--space-4);
+  font-size: var(--fs-small);
+  text-align: center;
+  color: var(--color-charcoal-70);
+}
+.auth-footer-note a { font-weight: 600; color: var(--color-charcoal); text-decoration: underline; text-underline-offset: 3px; }
+
+.password-field { position: relative; }
+.password-field input { padding-right: 2.75rem; }
+.password-toggle {
+  position: absolute;
+  right: 0.7rem;
+  top: 2.35rem;
+  background: none;
+  border: none;
+  padding: 0.3rem;
+  color: var(--color-charcoal-70);
+}
+
+@media (max-width: 768px) {
+  .form-grid-2 { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Signup — Saraswati Group of Colleges</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+</head>
+<body>
+
+  <div class="auth-shell">
+    <div class="auth-shell__form">
+      <div class="auth-shell__form-inner">
+        <a href="../index.html" class="auth-logo">SGC <em class="accent">Events</em></a>
+        <h1 class="type-h1 auth-heading">Create your account</h1>
+        <p class="auth-subheading">Register once, join every event on campus.</p>
+
+        <form id="signup-form" novalidate>
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+            <p class="form-error" data-error-for="name"></p>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="rollNo">Roll Number</label>
+              <input type="text" id="rollNo" name="rollNo" required />
+              <p class="form-error" data-error-for="rollNo"></p>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+              <p class="form-error" data-error-for="phone"></p>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+            <p class="form-error" data-error-for="email"></p>
+          </div>
+
+          <div class="form-field password-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required />
+            <p class="form-error" data-error-for="password"></p>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="department">Department</label>
+              <select id="department" name="department" required>
+                <option value="" disabled selected>Select department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="General">General</option>
+              </select>
+              <p class="form-error" data-error-for="department"></p>
+            </div>
+            <div class="form-field">
+              <label for="semester">Semester</label>
+              <select id="semester" name="semester" required>
+                <option value="" disabled selected>Select semester</option>
+                <option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option>
+                <option value="5">5</option><option value="6">6</option>
+                <option value="7">7</option><option value="8">8</option>
+              </select>
+              <p class="form-error" data-error-for="semester"></p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--turquoise btn--block">Create Account</button>
+        </form>
+
+        <p class="auth-footer-note">Already have an account? <a href="login.html">Log in</a></p>
+      </div>
+    </div>
+    <div class="auth-shell__media">
+      <img src="https://picsum.photos/seed/student-signup/900/1200" alt="Students at a campus event" />
+    </div>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+</body>
+</html>
