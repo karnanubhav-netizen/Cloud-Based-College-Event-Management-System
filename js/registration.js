@@ -42,8 +42,17 @@ function registrationDocId(eventId, studentId) {
 /** Cheap existence check for rendering button state (not the source of truth during registration itself). */
 export async function checkExistingRegistration(eventId, studentId) {
   if (!eventId || !studentId) return false;
-  const snap = await getDoc(doc(db, COLLECTIONS.REGISTRATIONS, registrationDocId(eventId, studentId)));
-  return snap.exists();
+
+  const q = query(
+    collection(db, COLLECTIONS.REGISTRATIONS),
+    where("studentId", "==", studentId)
+  );
+
+  const snapshot = await getDocs(q);
+
+  return snapshot.docs.some(
+    (docSnap) => docSnap.data().eventId === eventId
+  );
 }
 
 /**
