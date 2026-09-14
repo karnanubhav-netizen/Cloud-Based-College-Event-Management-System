@@ -59,14 +59,42 @@
   .auth-shell { grid-template-columns: 1fr; }
   .auth-shell__media { display: none; }
 
-  .app-shell { grid-template-columns: 1fr; }
-  .app-sidebar {
-    position: sticky; top: 0; z-index: 30;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: var(--space-2) var(--space-3);
+  .app-shell {
+    grid-template-columns: 1fr;
   }
-  .app-sidebar__nav { display: none; }
-  .app-main { padding: var(--space-3); }
+
+  .app-sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: var(--space-2) var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .app-sidebar__logo {
+    margin: 0;
+    width: 100%;
+  }
+
+  .app-sidebar__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 0.35rem;
+  }
+
+  .app-sidebar__nav a {
+    margin: 0;
+    padding: 0.65rem 0.75rem;
+    text-align: center;
+  }
+
+  .app-main {
+    padding: var(--space-3);
+  }
 }
 
 /* ---------- Phone (<=425px) ---------- */
