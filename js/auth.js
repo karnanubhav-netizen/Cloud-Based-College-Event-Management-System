@@ -192,10 +192,11 @@ function initLoginForm() {
       const redirect = params.get("redirect");
 
       if (redirect) {
-        let redirectUrl = new URL(redirect, window.location.href);
+        const redirectUrl = new URL(redirect, window.location.origin);
 
-        // Fix event-details path when login page is inside /student/
-        if (redirectUrl.pathname.endsWith("/student/event-details.html")) {
+        // If the redirect points to student/event-details.html,
+        // move it to the correct root-level event-details.html
+        if (redirectUrl.pathname.includes("/student/event-details.html")) {
           redirectUrl.pathname = redirectUrl.pathname.replace(
             "/student/event-details.html",
             "/event-details.html"
