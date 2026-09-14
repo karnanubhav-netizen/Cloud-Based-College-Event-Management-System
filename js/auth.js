@@ -188,8 +188,15 @@ function initLoginForm() {
     const result = await loginWithEmail(email, password);
 
     if (result.ok) {
-      const redirect = new URLSearchParams(window.location.search).get("redirect");
-      window.location.href = redirect || "dashboard.html";
+      const params = new URLSearchParams(window.location.search);
+      const redirect = params.get("redirect");
+
+      if (redirect) {
+        const redirectUrl = new URL(redirect, window.location.href);
+        window.location.href = redirectUrl.href;
+      } else {
+        window.location.href = "dashboard.html";
+      }
     } else {
       showFormError(form, result.error);
       submitBtn.disabled = false;

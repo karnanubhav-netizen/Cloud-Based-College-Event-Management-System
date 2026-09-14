@@ -91,8 +91,13 @@ async function refreshRegistrationUi() {
       label: "Login to Register",
       disabled: false,
       onClick: () => {
+        const redirectUrl = new URL("event-details.html", window.location.href);
+        redirectUrl.searchParams.set("id", currentEventId);
+
         window.location.href =
-          `student/login.html?redirect=../event-details.html?id=${currentEventId}`;
+          `student/login.html?redirect=${encodeURIComponent(
+            redirectUrl.href
+          )}`;
       },
     });
 
