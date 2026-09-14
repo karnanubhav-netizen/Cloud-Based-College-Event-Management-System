@@ -192,7 +192,16 @@ function initLoginForm() {
       const redirect = params.get("redirect");
 
       if (redirect) {
-        const redirectUrl = new URL(redirect, window.location.href);
+        let redirectUrl = new URL(redirect, window.location.href);
+
+        // Fix event-details path when login page is inside /student/
+        if (redirectUrl.pathname.endsWith("/student/event-details.html")) {
+          redirectUrl.pathname = redirectUrl.pathname.replace(
+            "/student/event-details.html",
+            "/event-details.html"
+          );
+        }
+
         window.location.href = redirectUrl.href;
       } else {
         window.location.href = "dashboard.html";
