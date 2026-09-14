@@ -192,18 +192,7 @@ function initLoginForm() {
       const redirect = params.get("redirect");
 
       if (redirect) {
-        const redirectUrl = new URL(redirect, window.location.origin);
-
-        // If the redirect points to student/event-details.html,
-        // move it to the correct root-level event-details.html
-        if (redirectUrl.pathname.includes("/student/event-details.html")) {
-          redirectUrl.pathname = redirectUrl.pathname.replace(
-            "/student/event-details.html",
-            "/event-details.html"
-          );
-        }
-
-        window.location.href = redirectUrl.href;
+        window.location.href = redirect;
       } else {
         window.location.href = "dashboard.html";
       }
